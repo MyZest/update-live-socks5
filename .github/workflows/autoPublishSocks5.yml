@@ -1,0 +1,35 @@
+name: autoPublishSocks5
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'    # 每30分钟执行
+    
+env:
+  TZ: UTC # 设置默认时区
+
+jobs:
+  autoPublishSocks5:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Set up nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      - name: install
+        run: npm install
+
+      - name: run to start
+        run: npm run start
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: Auto update Socks5
+          add: '*'
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
