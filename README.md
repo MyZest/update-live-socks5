@@ -4,7 +4,7 @@
 
   - **SOCKS5 JSON**
     ```bash
-    https://raw.githubusercontent.com/MyZest/update-live-socks5/master/liveSocks5Group.json
+    https://raw.githubusercontent.com/MyZest/update-live-socks5/master/liveSocks5List.json
     ```
     
   - **SOCKS5 TXT**
@@ -23,7 +23,7 @@
 
   - **SOCKS5 JSON**
     ```bash
-    https://cdn.jsdelivr.net/gh/MyZest/update-live-socks5@master/liveSocks5Group.json
+    https://cdn.jsdelivr.net/gh/MyZest/update-live-socks5@master/liveSocks5List.json
     ```
     
   - **SOCKS5 TXT**
