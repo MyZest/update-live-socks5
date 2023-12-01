@@ -2,7 +2,7 @@ name: autoPublishSocks5
 
 on:
   schedule:
-    - cron: '*/15 * * * *'    # 每15分钟执行
+    - cron: '*/6 * * * *'    # 每6分钟执行
     
 env:
   TZ: UTC # 设置默认时区
